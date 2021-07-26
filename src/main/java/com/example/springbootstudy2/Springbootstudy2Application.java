@@ -1,13 +1,28 @@
 package com.example.springbootstudy2;
 
 import me.seo.Holomen;
+//import org.apache.catalina.Context;
+//import org.apache.catalina.LifecycleException;
+//import org.apache.catalina.startup.Tomcat;
+import org.apache.catalina.connector.Connector;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.SpringBootConfiguration;
 import org.springframework.boot.WebApplicationType;
 import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.boot.web.embedded.tomcat.TomcatServletWebServerFactory;
+import org.springframework.boot.web.servlet.server.ServletWebServerFactory;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.ComponentScan;
+
+import javax.servlet.ServletException;
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+import java.io.File;
+import java.io.IOException;
+import java.io.PrintWriter;
+import java.nio.file.Files;
 
 /*
 mvn package jar 파일 생성
@@ -31,6 +46,8 @@ mvn repository에서 depenencies 추가
 spring boot가 관리하지 않는 모델 버전은 명시 해야함
 spring boot가 관리하는 기존 버전 properties에 추가해서 변경
 
+spring boot 자체는 웹서버 아니다
+
  */
 @SpringBootApplication
 /*
@@ -43,9 +60,12 @@ spring boot가 관리하는 기존 버전 properties에 추가해서 변경
 AutoConfiguration도 자바 설정 파일 조건에 따라 bean 등록 달라진다
 // 빈 등록 componentscan으로 등록 먼저 하고 autoconfiguration 사용
  */
+/*
+기본 내장 웹 서버 톰켓
+ */
 public class Springbootstudy2Application {
 
-    public static void main(String[] args) {
+    public static void main(String[] args) /*throws LifecycleException, IOException*/ {
         /*
         // @Configuration @ComponentScan 만 사용
         // spring application 커스텀 // webapplication 사용 x
@@ -54,6 +74,49 @@ public class Springbootstudy2Application {
         application.run(args);
          */
         SpringApplication.run(Springbootstudy2Application.class, args);
+        /*
+        ServeletWebServerFactoryAutoConfiguration이 서블릿 웹 서버 자동 설정
+        web mvc 디스패처 서블릿 필요 <= http 서블릿 상속받아 만든 것
+        서블릿 웹 서버 설정과 디스패처 서블릿 설정이 나뉜 이유
+        웹 서버 설정과 서블릿은 독립적이다 웹 서버 설정이 서블릿에 영항 x
+
+        */
+        /*
+        // 자바로 tomcat 만들기
+        // 톰켓 객체 생성
+        Tomcat tomcat = new Tomcat();
+        // 톰켓 포트 설정
+        tomcat.setPort(8080);
+        // connector 설정
+        tomcat.getConnector();
+
+        // 톰켓 docBase 설정
+        // tomcat.8080 directory
+        String docBase = Files.createTempDirectory("tomcat-basedir").toString();
+        // 톰켓에 context 추가
+        Context context = tomcat.addContext("/", docBase);
+        // 서블릿 만들기
+        HttpServlet servlet = new HttpServlet() {
+            @Override
+            protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+                PrintWriter writer = resp.getWriter();
+                writer.println("<html><head><title>");
+                writer.println("Hey tomcat");
+                writer.println("</title></head>");
+                writer.println("<body><h1> Hello tomcat </body></h1>");
+                writer.println("</html>");
+            }
+        };
+        String servletName = "helloServlet";
+        // 경로 서블릿 이름, 서블릿 객체
+        // 톰켓에 서블릿 추가
+        tomcat.addServlet("/",servletName,servlet);
+        // 컨텍스트에 서블릿 매핑
+        context.addServletMappingDecoded("/hello",servletName);
+        tomcat.start();
+        tomcat.getServer().await();
+
+         */
     }
     /*
     // Holomen autoconfiguration에서 해당 bean이 있으므로 bean 등록 x,  holomen 에서 bean 등록했을 때  @ConditionalOnMissingBean annotation 사용
@@ -64,6 +127,20 @@ public class Springbootstudy2Application {
         holomen.setHowLong(10);
         return holomen;
     }
-    
+
      */
+
+    // Http 커넥터 추가
+    @Bean
+    public ServletWebServerFactory serverFactory(){
+        TomcatServletWebServerFactory tomcat = new TomcatServletWebServerFactory();
+        tomcat.addAdditionalTomcatConnectors(createStandardConnector());
+        return tomcat;
+    }
+
+    private Connector createStandardConnector() {
+        Connector connector = new Connector("org.apache.coyote.http11.Http11NioProtocol");
+        connector.setPort(8080);
+        return connector;
+    }
 }
