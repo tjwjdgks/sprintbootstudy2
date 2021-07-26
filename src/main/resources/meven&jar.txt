@@ -1,0 +1,2 @@
+mvn clean target 삭제
+mvn package spring boot jar 파일 패키징

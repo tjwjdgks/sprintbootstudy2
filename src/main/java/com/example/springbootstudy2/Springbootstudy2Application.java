@@ -4,6 +4,7 @@ import me.seo.Holomen;
 //import org.apache.catalina.Context;
 //import org.apache.catalina.LifecycleException;
 //import org.apache.catalina.startup.Tomcat;
+import org.apache.catalina.LifecycleException;
 import org.apache.catalina.connector.Connector;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.SpringBootConfiguration;
@@ -65,7 +66,7 @@ AutoConfiguration도 자바 설정 파일 조건에 따라 bean 등록 달라진
  */
 public class Springbootstudy2Application {
 
-    public static void main(String[] args) /*throws LifecycleException, IOException*/ {
+    public static void main(String[] args) throws LifecycleException, IOException {
         /*
         // @Configuration @ComponentScan 만 사용
         // spring application 커스텀 // webapplication 사용 x
