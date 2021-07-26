@@ -41,7 +41,7 @@ spring boot가 관리하는 기존 버전 properties에 추가해서 변경
 @ComponentScan // 빈을 ComponentScan 단계로 등록 Component 애노테이션 bean 등록
 @EnableAutoConfiguration // 읽어온 빈들을 등록 meta file, java resources 안에 meta 디렉토리 안에 spring.factories에 등록
 AutoConfiguration도 자바 설정 파일 조건에 따라 bean 등록 달라진다
-// 빈 등록 componentscan으로 등록 먼저 하고 autoconfiguration 사용 
+// 빈 등록 componentscan으로 등록 먼저 하고 autoconfiguration 사용
  */
 public class Springbootstudy2Application {
 
@@ -55,5 +55,15 @@ public class Springbootstudy2Application {
          */
         SpringApplication.run(Springbootstudy2Application.class, args);
     }
-
+    /*
+    // Holomen autoconfiguration에서 해당 bean이 있으므로 bean 등록 x,  holomen 에서 bean 등록했을 때  @ConditionalOnMissingBean annotation 사용
+    @Bean
+    public Holomen holomen(){
+        Holomen holomen = new Holomen();
+        holomen.setName("test");
+        holomen.setHowLong(10);
+        return holomen;
+    }
+    
+     */
 }
