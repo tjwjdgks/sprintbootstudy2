@@ -1,5 +1,6 @@
 package com.example.springbootstudy2;
 
+import com.example.springbootstudy2.Listener.SimpleListener;
 import me.seo.Holomen;
 //import org.apache.catalina.Context;
 //import org.apache.catalina.LifecycleException;
@@ -74,7 +75,17 @@ public class Springbootstudy2Application {
         application.setWebApplicationType(WebApplicationType.NONE);
         application.run(args);
          */
-        SpringApplication.run(Springbootstudy2Application.class, args);
+        // instance 만들어서 run 하는 방법이 효과적
+        // -Ddebug 모드를 사용하면 autoconfiguration 자동설정 확인 가능
+        SpringApplication app = new SpringApplication(Springbootstudy2Application.class);
+        app.addListeners(new SimpleListener());
+        // WebApplicationType.SERVLET spring mvc가 들어 있을 경우 기본으로
+        // WebApplicationType.REACTIVE srping webflux (서블릿 없을 경우) 서블릿이 있으면 SERVLET
+        // 둘다 없을 경우 None으로 동작
+        // jvm argument -D application argument -- 으로 시작한다
+        app.setWebApplicationType(WebApplicationType.NONE);
+        app.run(args);
+
         /*
         ServeletWebServerFactoryAutoConfiguration이 서블릿 웹 서버 자동 설정
         web mvc 디스패처 서블릿 필요 <= http 서블릿 상속받아 만든 것
