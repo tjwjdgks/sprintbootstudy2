@@ -11,12 +11,6 @@ import org.springframework.stereotype.Component;
 
 @Component
 public class SimpleRunner implements ApplicationRunner {
-    // 외부 라이브러리에서도 properties 가져올 수 있음 but 이미 bean으로 바인딩 되므로 사실상 유의미 x
-    @ConfigurationProperties("server")
-    @Bean
-    public ServerProperties serverProperties(){
-        return new ServerProperties();
-    }
     @Autowired
     SimpleProperties properties;
     @Value("${seo.name}")

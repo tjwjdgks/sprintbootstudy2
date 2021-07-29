@@ -7,6 +7,7 @@ import org.springframework.stereotype.Component;
 import org.springframework.validation.annotation.Validated;
 
 import javax.validation.constraints.NotEmpty;
+import javax.validation.constraints.NotNull;
 import java.time.Duration;
 import java.time.temporal.ChronoUnit;
 
@@ -19,7 +20,7 @@ import java.time.temporal.ChronoUnit;
 @ConfigurationProperties("simple")
 @Validated
 public class SimpleProperties {
-    @NotEmpty
+    @NotNull
     private int age;
     private String name;
     private String full;
