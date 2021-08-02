@@ -1,5 +1,7 @@
-package com.example.springbootstudy2;
+package com.example.springbootstudy2.controller;
 
+import com.example.springbootstudy2.service.SimpleService;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
 

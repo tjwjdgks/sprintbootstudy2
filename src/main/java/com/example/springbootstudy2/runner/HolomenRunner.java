@@ -1,4 +1,4 @@
-package com.example.springbootstudy2;
+package com.example.springbootstudy2.runner;
 
 import me.seo.Holomen;
 import org.springframework.beans.factory.annotation.Autowired;
