@@ -1,0 +1,23 @@
+spring boot 로깅
+commons logging 사용 slf4j
+로깅 퍼사드 vs 로깅
+Commons Logging, SLF4j (로거 api들을 추상화 해놓은 인터페이스)
+로깅 퍼사드의 장점 로거를 바꿀 수 있음
+
+spring boot
+Spring-JCL
+Commons Logging -> SLF4j or Log4j2
+
+commons logging 사용 (spring jcl) -> slf4j -> logback
+
+spring 기본 실행시 로그
+2021-08-02 15:55:42.219  INFO 24756 --- [           main] c.e.s.Springbootstudy2Application        : Starting Springbootstudy2Application using Java 11.0.6 on DESKTOP-K76D6PO with PID 24756 (C:\Users\SEO\Documents\GitHub\springbootstudy2\target\classes started by SEO in C:\Users\SEO\Documents\GitHub\springbootstudy2)
+날짜           시간      로그레벨 pid               쓰레드이름       풀패키지 경로와 클래스 이름                     메시지
+
+--debug (일부 핵심 라이브러리만 디버깅 모드로) hibernate, spring boot, embeded container
+--trace (전부 다 디버깅 모드로)
+컬러 출력: spring.output.ansi.enabled
+파일 출력: logging.file 또는 logging.path
+로그 레벨 조정: logging.level.패지키 = 로그 레벨
+기본 콘솔
+파일 출력

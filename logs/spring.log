@@ -1,0 +1,17 @@
+2021-08-02 16:33:15.532  INFO 25656 --- [main] c.e.s.Springbootstudy2Application        : Starting Springbootstudy2Application using Java 11.0.6 on DESKTOP-K76D6PO with PID 25656 (C:\Users\SEO\Documents\GitHub\springbootstudy2\target\classes started by SEO in C:\Users\SEO\Documents\GitHub\springbootstudy2)
+2021-08-02 16:33:15.535  INFO 25656 --- [main] c.e.s.Springbootstudy2Application        : The following profiles are active: prod
+2021-08-02 16:33:16.237  INFO 25656 --- [main] c.e.s.Springbootstudy2Application        : Started Springbootstudy2Application in 0.966 seconds (JVM running for 2.101)
+2021-08-02 16:39:57.113  INFO 22432 --- [main] c.e.s.Springbootstudy2Application        : Starting Springbootstudy2Application using Java 11.0.6 on DESKTOP-K76D6PO with PID 22432 (C:\Users\SEO\Documents\GitHub\springbootstudy2\target\classes started by SEO in C:\Users\SEO\Documents\GitHub\springbootstudy2)
+2021-08-02 16:39:57.115 DEBUG 22432 --- [main] c.e.s.Springbootstudy2Application        : Running with Spring Boot v2.5.3, Spring v5.3.9
+2021-08-02 16:39:57.116  INFO 22432 --- [main] c.e.s.Springbootstudy2Application        : The following profiles are active: prod
+2021-08-02 16:39:57.824  INFO 22432 --- [main] c.e.s.Springbootstudy2Application        : Started Springbootstudy2Application in 0.974 seconds (JVM running for 2.074)
+2021-08-02 16:39:57.826  INFO 22432 --- [main] c.example.springbootstudy2.SimpleRunner  : ============================
+2021-08-02 16:39:57.826  INFO 22432 --- [main] c.example.springbootstudy2.SimpleRunner  : junghan
+2021-08-02 16:39:57.826  INFO 22432 --- [main] c.example.springbootstudy2.SimpleRunner  : ============================
+2021-08-02 16:41:23.944  INFO 24488 --- [main] c.e.s.Springbootstudy2Application        : Starting Springbootstudy2Application using Java 11.0.6 on DESKTOP-K76D6PO with PID 24488 (C:\Users\SEO\Documents\GitHub\springbootstudy2\target\classes started by SEO in C:\Users\SEO\Documents\GitHub\springbootstudy2)
+2021-08-02 16:41:23.946 DEBUG 24488 --- [main] c.e.s.Springbootstudy2Application        : Running with Spring Boot v2.5.3, Spring v5.3.9
+2021-08-02 16:41:23.947  INFO 24488 --- [main] c.e.s.Springbootstudy2Application        : The following profiles are active: prod
+2021-08-02 16:41:24.681  INFO 24488 --- [main] c.e.s.Springbootstudy2Application        : Started Springbootstudy2Application in 1.002 seconds (JVM running for 2.095)
+2021-08-02 16:41:24.682 DEBUG 24488 --- [main] c.example.springbootstudy2.SimpleRunner  : ============================
+2021-08-02 16:41:24.682 DEBUG 24488 --- [main] c.example.springbootstudy2.SimpleRunner  : junghan
+2021-08-02 16:41:24.682 DEBUG 24488 --- [main] c.example.springbootstudy2.SimpleRunner  : ============================

@@ -84,6 +84,7 @@ public class Springbootstudy2Application {
         // 둘다 없을 경우 None으로 동작
         // jvm argument -D application argument -- 으로 시작한다
         app.setWebApplicationType(WebApplicationType.NONE);
+        //app.setWebApplicationType(WebApplicationType.SERVLET);
         app.run(args);
 
         /*

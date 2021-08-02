@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--
+커스텀 로그 사용하기 logback
+spring boot 가 logback 추가 기능 제공, 프로 파일 이나 enviroment 사용 가능
+기본 log back
+xml 파일
+-->
+<configuration>
+    <include resource="org/springframework/boot/logging/logback/defaults.xml"/>
+    <include resource="org/springframework/boot/logging/logback/console-appender.xml" />
+    <root level="INFO">
+        <appender-ref ref="CONSOLE" />
+    </root>
+    <logger name="com.example" level="DEBUG"/>
+</configuration>
