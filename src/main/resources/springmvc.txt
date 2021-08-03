@@ -1,0 +1,8 @@
+spring boot 기본 설정으로 바로 개발 가능
+기본 설정 spring boot auto configure에서 spring.factories에서 자동 설정있음
+스프링 부트 MVC
+자동 설정으로 제공하는 여러 기본 기능
+스프링 MVC 확장
+@Configuration + WebMvcConfigurer
+스프링 MVC 재정의
+@Configuration + @EnableWebMvc

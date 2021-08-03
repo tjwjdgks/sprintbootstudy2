@@ -1,0 +1,13 @@
+spring dev tools
+cache와 관련 있음 properties 파일에서 cache를 끈다
+개발하기 유용하기 위해 개발환경 변경
+https://github.com/spring-projects/spring-boot/blob/v2.5.3/spring-boot-project/spring-boot-devtools/src/main/java/org/springframework/boot/devtools/env/DevToolsPropertyDefaultsPostProcessor.java
+
+현재 dev tool 기능 적용 , 적용 될때가 있고 안될 때가 있을 수도 있음
+
+spring boot classloader 2개 사용
+base - 의존성을 바꾸지 않는 리이브러리 읽는 class loader
+restart - application 읽는 class loader
+
+글로벌 설정
+~/.spring-boot-devtools.properties 1순위 우선순위

@@ -83,8 +83,8 @@ public class Springbootstudy2Application {
         // WebApplicationType.REACTIVE srping webflux (서블릿 없을 경우) 서블릿이 있으면 SERVLET
         // 둘다 없을 경우 None으로 동작
         // jvm argument -D application argument -- 으로 시작한다
-        app.setWebApplicationType(WebApplicationType.NONE);
-        //app.setWebApplicationType(WebApplicationType.SERVLET);
+        //app.setWebApplicationType(WebApplicationType.NONE);
+        app.setWebApplicationType(WebApplicationType.SERVLET);
         app.run(args);
 
         /*
