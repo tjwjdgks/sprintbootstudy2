@@ -1,0 +1,12 @@
+웰컴 페이지
+root 요청시 "/"
+기본 리소스 위치들에서
+    index.html 찾아 보고 있으면 제공.
+    index.템플릿 찾아 보고 있으면 제공.
+    둘 다 없으면 에러 페이지.
+파비콘
+favicon.ico
+파이콘 만들기 https://favicon.io/
+기본 리소스 디렉토리에 favicon.ico 파일로 저장
+파비콘이 안 바뀔 때?
+https://stackoverflow.com/questions/2208933/how-do-i-force-a-favicon-refresh // 2번째 방법

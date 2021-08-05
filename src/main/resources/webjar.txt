@@ -1,0 +1,2 @@
+web jar란
+클라이언트에서 사용하는 자바스크립트 라이브러리 jquery bootstrap, react js 등도 jar파일로 추가 가능하다

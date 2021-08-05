@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <h1> hello dev directory </h1>
+
+<!-- 자바 스크립트 문서 끝단에 넣었던 이유, 문서가 로딩된후 자바스크립트를 로딩하므로 화면을 빨리 띠울 수 있음-->
+<!--
+버전 생략하고 사용하려면  webjars-locator-core 의존성 추가 - 리소스 체이닝, 리소스 핸들러, 리소스 트랜스포머 체이닝
+웹JAR 맵핑 “ /webjars/**”
+-->
+<script src = "/webjars/jquery/3.3.1/dist/jquery.min.js"></script>
+<script>
+    $(function(){
+       alert("ready!");
+    });
+</script>
+</body>
+</html>

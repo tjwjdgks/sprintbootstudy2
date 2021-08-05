@@ -1,0 +1,6 @@
+HTML 템플릿 뷰 테스트를 보다 전문적으로 하자.
+html 단위테스트 툴
+http://htmlunit.sourceforge.net/
+http://htmlunit.sourceforge.net/gettingStarted.html
+
+xpath란 xml navigation 할수 있는 우용한 문법
