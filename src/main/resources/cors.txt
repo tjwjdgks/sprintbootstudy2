@@ -1,0 +1,12 @@
+SOP과 CORS
+    Single-Origin Policy // 같은 Origin에만 요청을 보낼 수 있다 (기본)
+    Cross-Origin Resource Sharing // Single-Origin Policy 를 우회하기 위한 기능 // 서로 다른 Origin 끼리 리소스 sharing 가능
+    Origin?
+        URI 스키마 (http, https)
+        hostname (whiteship.me, localhost) 도메인
+        포트 (8080, 18080)
+        ex) 18080의 웹서버에 리소스를 8080에서 가져오려고 하면 호출 못함
+스프링 MVC @CrossOrigin
+    https://docs.spring.io/spring/docs/5.0.7.RELEASE/spring-framework-reference/web.html#mvc-cors
+    @Controller나 @RequestMapping에 추가하거나
+    WebMvcConfigurer 사용해서 글로벌 설정

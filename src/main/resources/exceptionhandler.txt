@@ -1,0 +1,23 @@
+스프링 부트 이미 error handler 내장되어 있음, handler에 의해서 message 보임 html or json
+
+스프링 @MVC 예외 처리 방법
+    @ControllerAdvice 전역적으로 사용하는 방법 class 위에 붙인다 통합 exception handler
+    @ExceptionHandler
+
+스프링 부트가 제공하는 기본 예외 처리기
+    BasicErrorController
+    기본 mapping이 error로 되어 있음
+    문법
+    * @RequestMapping({"${server.error.path:${error.path:/error}}"})
+                  : 을 기준으로 이전의 값이 있으면 이전의 값을 사용 없으면 이후의 값을 사용
+    HTML과 JSON 응답 지원
+    커스터마이징 방법
+    ErrorController 구현
+
+커스텀 에러 페이지
+    상태 코드 값에 따라 에러 페이지 보여주기
+    src/main/resources/static|template/error/
+    정적일 때는 static 동적일 때는 template
+    404.html
+    5xx.html
+    ErrorViewResolver 구현
