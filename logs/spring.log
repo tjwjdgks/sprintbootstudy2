@@ -1,17 +1,22 @@
-2021-08-02 16:33:15.532  INFO 25656 --- [main] c.e.s.Springbootstudy2Application        : Starting Springbootstudy2Application using Java 11.0.6 on DESKTOP-K76D6PO with PID 25656 (C:\Users\SEO\Documents\GitHub\springbootstudy2\target\classes started by SEO in C:\Users\SEO\Documents\GitHub\springbootstudy2)
-2021-08-02 16:33:15.535  INFO 25656 --- [main] c.e.s.Springbootstudy2Application        : The following profiles are active: prod
-2021-08-02 16:33:16.237  INFO 25656 --- [main] c.e.s.Springbootstudy2Application        : Started Springbootstudy2Application in 0.966 seconds (JVM running for 2.101)
-2021-08-02 16:39:57.113  INFO 22432 --- [main] c.e.s.Springbootstudy2Application        : Starting Springbootstudy2Application using Java 11.0.6 on DESKTOP-K76D6PO with PID 22432 (C:\Users\SEO\Documents\GitHub\springbootstudy2\target\classes started by SEO in C:\Users\SEO\Documents\GitHub\springbootstudy2)
-2021-08-02 16:39:57.115 DEBUG 22432 --- [main] c.e.s.Springbootstudy2Application        : Running with Spring Boot v2.5.3, Spring v5.3.9
-2021-08-02 16:39:57.116  INFO 22432 --- [main] c.e.s.Springbootstudy2Application        : The following profiles are active: prod
-2021-08-02 16:39:57.824  INFO 22432 --- [main] c.e.s.Springbootstudy2Application        : Started Springbootstudy2Application in 0.974 seconds (JVM running for 2.074)
-2021-08-02 16:39:57.826  INFO 22432 --- [main] c.example.springbootstudy2.SimpleRunner  : ============================
-2021-08-02 16:39:57.826  INFO 22432 --- [main] c.example.springbootstudy2.SimpleRunner  : junghan
-2021-08-02 16:39:57.826  INFO 22432 --- [main] c.example.springbootstudy2.SimpleRunner  : ============================
-2021-08-02 16:41:23.944  INFO 24488 --- [main] c.e.s.Springbootstudy2Application        : Starting Springbootstudy2Application using Java 11.0.6 on DESKTOP-K76D6PO with PID 24488 (C:\Users\SEO\Documents\GitHub\springbootstudy2\target\classes started by SEO in C:\Users\SEO\Documents\GitHub\springbootstudy2)
-2021-08-02 16:41:23.946 DEBUG 24488 --- [main] c.e.s.Springbootstudy2Application        : Running with Spring Boot v2.5.3, Spring v5.3.9
-2021-08-02 16:41:23.947  INFO 24488 --- [main] c.e.s.Springbootstudy2Application        : The following profiles are active: prod
-2021-08-02 16:41:24.681  INFO 24488 --- [main] c.e.s.Springbootstudy2Application        : Started Springbootstudy2Application in 1.002 seconds (JVM running for 2.095)
-2021-08-02 16:41:24.682 DEBUG 24488 --- [main] c.example.springbootstudy2.SimpleRunner  : ============================
-2021-08-02 16:41:24.682 DEBUG 24488 --- [main] c.example.springbootstudy2.SimpleRunner  : junghan
-2021-08-02 16:41:24.682 DEBUG 24488 --- [main] c.example.springbootstudy2.SimpleRunner  : ============================
+2021-08-06 16:48:03.718  INFO 3924 --- [restartedMain] c.e.s.Springbootstudy2Application        : Starting Springbootstudy2Application using Java 11.0.6 on DESKTOP-K76D6PO with PID 3924 (C:\Users\SEO\Documents\GitHub\springbootstudy2\target\classes started by SEO in C:\Users\SEO\Documents\GitHub\springbootstudy2)
+2021-08-06 16:48:03.720 DEBUG 3924 --- [restartedMain] c.e.s.Springbootstudy2Application        : Running with Spring Boot v2.5.3, Spring v5.3.9
+2021-08-06 16:48:03.720  INFO 3924 --- [restartedMain] c.e.s.Springbootstudy2Application        : The following profiles are active: prod
+2021-08-06 16:48:03.761  INFO 3924 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2021-08-06 16:48:03.761  INFO 3924 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2021-08-06 16:48:04.723  INFO 3924 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8443 (https) 8080 (http)
+2021-08-06 16:48:04.738  INFO 3924 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2021-08-06 16:48:04.738  INFO 3924 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.50]
+2021-08-06 16:48:04.813  INFO 3924 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2021-08-06 16:48:04.813  INFO 3924 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1051 ms
+2021-08-06 16:48:04.833  INFO 3924 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2021-08-06 16:48:04.902  INFO 3924 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2021-08-06 16:48:04.906  INFO 3924 --- [restartedMain] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:h2:mem:26594296-445d-443d-b8ae-55b55e13c92b'
+2021-08-06 16:48:05.184  INFO 3924 --- [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page: class path resource [static/index.html]
+2021-08-06 16:48:05.331  INFO 3924 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2021-08-06 16:48:05.835  INFO 3924 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8443 (https) 8080 (http) with context path ''
+2021-08-06 16:48:05.850  INFO 3924 --- [restartedMain] c.e.s.Springbootstudy2Application        : Started Springbootstudy2Application in 2.478 seconds (JVM running for 3.779)
+2021-08-06 16:48:05.853 DEBUG 3924 --- [restartedMain] c.e.springbootstudy2.runner.H2Runner     : jdbc:h2:mem:26594296-445d-443d-b8ae-55b55e13c92b
+2021-08-06 16:48:05.853 DEBUG 3924 --- [restartedMain] c.e.springbootstudy2.runner.H2Runner     : SA
+2021-08-06 16:48:05.853 DEBUG 3924 --- [restartedMain] c.e.s.runner.SimpleRunner                : ============================
+2021-08-06 16:48:05.853 DEBUG 3924 --- [restartedMain] c.e.s.runner.SimpleRunner                : junghan
+2021-08-06 16:48:05.853 DEBUG 3924 --- [restartedMain] c.e.s.runner.SimpleRunner                : ============================
