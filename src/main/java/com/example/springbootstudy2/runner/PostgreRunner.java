@@ -1,5 +1,5 @@
 package com.example.springbootstudy2.runner;
-/*
+
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -13,8 +13,8 @@ import java.sql.Connection;
 import java.sql.Statement;
 
 @Component
-public class H2Runner implements ApplicationRunner {
-    Logger logger = LoggerFactory.getLogger(H2Runner.class);
+public class PostgreRunner implements ApplicationRunner {
+    Logger logger = LoggerFactory.getLogger(PostgreRunner.class);
 
     @Autowired
     DataSource source;
@@ -29,19 +29,20 @@ public class H2Runner implements ApplicationRunner {
         // connection을 미리 만들어 놓고 application이 가져다 사용한다
         // dbcp(database connection pool) 성능에 영향을 많이 끼친다. spring boot 기본 Hikari CP
         // connection time, connection 객체를 몇개 사용(cpu core 개수와 동일) 할 지 중요함
+
         try (Connection connection = source.getConnection()) {
-            // 스프링 부트 기본 인메모리 DB 설정이 매번 새로운 이름으로 만들어 지도록 2.3부터 변경되
             logger.debug(connection.getMetaData().getURL());
             logger.debug(connection.getMetaData().getUserName());
+            System.out.println(source.getClass());
             // trancation 적용
             // 원래 try catch 로 예외처리
             // 예외시 roll back
             Statement statement = connection.createStatement();
-            String sql = "CREATE TABLE USER(ID INTEGER NOT NULL, name VARCHAR(255), PRIMARY KEY (id))";
+            // USER는 postgresql에서 키워드이므로 사용 x
+            String sql = "CREATE TABLE account(ID INTEGER NOT NULL, name VARCHAR(255), PRIMARY KEY (id))";
             statement.executeUpdate(sql);
         }
-        jdbcTemplate.execute("INSERT INTO USER VALUES (1,'SEO')");
+        jdbcTemplate.execute("INSERT INTO account VALUES (1,'SEO')");
 
     }
 }
-*/

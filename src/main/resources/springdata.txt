@@ -35,3 +35,24 @@ H2 콘솔 사용하는 방법
 *실습 코드
 CREATE TABLE USER (ID INTEGER NOT NULL, name VARCHAR(255), PRIMARY KEY (id))
 INSERT INTO USER VALUES (1, ‘keesun’)
+
+
+지원하는 DBCP
+    HikariCP (기본)
+        https://github.com/brettwooldridge/HikariCP#frequently-used
+    Tomcat CP
+    Commons DBCP2
+
+DBCP 설정
+    spring.datasource.hikari.*
+    spring.datasource.tomcat.*
+    spring.datasource.dbcp2.*
+
+MySQL 접속시 에러 (ssl connection 강제 하기 때문)
+    MySQL 5.* 최신 버전 사용할 때
+        jdbc:mysql:/localhost:3306/springboot?useSSL=false
+    MySQL 8.* 최신 버전 사용할 때
+        jdbc:mysql:/localhost:3306/springboot?useSSL=false&allowPublicKeyRetrieval=true
+
+다중데이터 소스 설정
+https://medium.com/@joeclever/using-multiple-datasources-with-spring-boot-and-spring-data-6430b00c02e7
