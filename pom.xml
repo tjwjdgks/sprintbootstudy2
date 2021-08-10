@@ -44,12 +44,12 @@
         </dependency>
          -->
 
-        <!--
+        <!-- jpa -->
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-data-jpa</artifactId>
         </dependency>
-        -->
+
         <!-- jdbc and 내장 메모리 db -->
         <dependency>
             <groupId>org.springframework.boot</groupId>
@@ -58,7 +58,7 @@
         <dependency>
             <groupId>com.h2database</groupId>
             <artifactId>h2</artifactId>
-            <scope>runtime</scope>
+            <scope>test</scope>
         </dependency>
         <!-- mysql을 추가 한 것이 아닌 mysql 접속할 수 있는 connecter 추가한 것-->
         <!--

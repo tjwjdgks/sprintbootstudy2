@@ -54,5 +54,8 @@ MySQL 접속시 에러 (ssl connection 강제 하기 때문)
     MySQL 8.* 최신 버전 사용할 때
         jdbc:mysql:/localhost:3306/springboot?useSSL=false&allowPublicKeyRetrieval=true
 
+Postgresql role 설명
+https://yeojin-dev.github.io/blog/postgresql-ubuntu/
+
 다중데이터 소스 설정
 https://medium.com/@joeclever/using-multiple-datasources-with-spring-boot-and-spring-data-6430b00c02e7

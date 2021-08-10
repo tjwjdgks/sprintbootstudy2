@@ -29,7 +29,7 @@ public class PostgreRunner implements ApplicationRunner {
         // connection을 미리 만들어 놓고 application이 가져다 사용한다
         // dbcp(database connection pool) 성능에 영향을 많이 끼친다. spring boot 기본 Hikari CP
         // connection time, connection 객체를 몇개 사용(cpu core 개수와 동일) 할 지 중요함
-
+        /*
         try (Connection connection = source.getConnection()) {
             logger.debug(connection.getMetaData().getURL());
             logger.debug(connection.getMetaData().getUserName());
@@ -44,5 +44,6 @@ public class PostgreRunner implements ApplicationRunner {
         }
         jdbcTemplate.execute("INSERT INTO account VALUES (1,'SEO')");
 
+         */
     }
 }

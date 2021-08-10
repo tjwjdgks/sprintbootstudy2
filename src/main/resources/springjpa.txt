@@ -1,0 +1,21 @@
+ORM(Object-Relational Mapping)과 JPA(java persistence Api)
+객체와 릴레이션을 맵핑할 때 발생하는 불일치를 해결하는 프레임워크
+
+객체 지향에서는 객체가 있고 객체는 다양한 type을 가질 수 있으며 다양한 크기를 지님
+but table은 컬럼 밖에 없고 테이블은 크기가 한정적
+
+어떻게 객체를 테이블에 맵핑시킬 수 있을 문제 해결
+테이블은 상속이 없지만 객체는 상속할 수 있음 상속구조 해결
+식별자는 어떻게 구분할 것인지
+
+위의 문제를 다루는 것이 orm
+
+jpa 스펙은 hibernate 기반으로 만들어짐
+
+jpa는 orm을 아주 쉽게 사용 가능해주는 것
+
+추상화
+spring data jpa -> jpa -> hibernate -> datasource
+
+spring boot jpa
+@EnableJpaRepositories 설정 해야 spring boot jpa 사용 가능(스프링 부트가 자동 설정)
