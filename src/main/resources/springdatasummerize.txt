@@ -1,0 +1,8 @@
+https://docs.spring.io/spring-boot/docs/current-SNAPSHOT/reference/htmlsingle/#boot-features-sql
+
+spring data 정리
+sql database 는 jdbc 있으면 jdbc template과 data source 지원
+
+embeded database h2 test 용이
+
+production db 기본 hikari cp 사용

@@ -7,6 +7,7 @@ import me.seo.Holomen;
 //import org.apache.catalina.startup.Tomcat;
 import org.apache.catalina.LifecycleException;
 import org.apache.catalina.connector.Connector;
+import org.neo4j.driver.Driver;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.SpringBootConfiguration;
 import org.springframework.boot.WebApplicationType;
@@ -16,6 +17,10 @@ import org.springframework.boot.web.embedded.tomcat.TomcatServletWebServerFactor
 import org.springframework.boot.web.servlet.server.ServletWebServerFactory;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.ComponentScan;
+import org.springframework.data.neo4j.core.ReactiveDatabaseSelectionProvider;
+import org.springframework.data.neo4j.core.transaction.ReactiveNeo4jTransactionManager;
+import org.springframework.data.neo4j.repository.config.ReactiveNeo4jRepositoryConfigurationExtension;
+import org.springframework.transaction.ReactiveTransactionManager;
 
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
