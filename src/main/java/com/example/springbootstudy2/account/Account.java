@@ -14,6 +14,8 @@ public class Account {
     private String username;
 
     private String password;
+    // migration version 1 이후 추가
+    private boolean active;
 
     public Long getId() {
         return id;
@@ -37,6 +39,14 @@ public class Account {
 
     public void setPassword(String password) {
         this.password = password;
+    }
+
+    public boolean isActive() {
+        return active;
+    }
+
+    public void setActive(boolean active) {
+        this.active = active;
     }
 
     @Override
