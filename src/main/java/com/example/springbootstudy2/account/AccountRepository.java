@@ -12,5 +12,5 @@ public interface AccountRepository extends JpaRepository<Account,Long> {
     //@Query(nativeQuery = true,value= "select * from account where username ='{0}'")
     // 기본값은 jpql을 사용해야함
     // Optional<Account> findByUsername(String username); assertIsEmpty or assertEmpty 사용
-    Account findByUsername(String username);
+    Optional<Account> findByUsername(String username);
 }

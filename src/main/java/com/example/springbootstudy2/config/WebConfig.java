@@ -1,10 +1,7 @@
 package com.example.springbootstudy2.config;
 
 import org.springframework.context.annotation.Configuration;
-import org.springframework.web.servlet.config.annotation.CorsRegistry;
-import org.springframework.web.servlet.config.annotation.EnableWebMvc;
-import org.springframework.web.servlet.config.annotation.ResourceHandlerRegistry;
-import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
+import org.springframework.web.servlet.config.annotation.*;
 
 // spring boot의 기능들을 확장하고 싶을 때 추가적으로 설정 할때 WebMvcConfigurer +  @Configuration
 @Configuration
@@ -30,4 +27,13 @@ public class WebConfig implements WebMvcConfigurer {
 
          */
     }
+    // url 과 맵핑을 시켜 준다
+    // 특정 요청이 들어올때 로직없이 view 보여주는 경우 사용
+    /*
+    @Override
+    public void addViewControllers(ViewControllerRegistry registry) {
+        registry.addViewController("/home").setViewName("home");
+    }
+
+     */
 }

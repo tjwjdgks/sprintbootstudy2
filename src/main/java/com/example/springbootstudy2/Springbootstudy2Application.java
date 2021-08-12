@@ -13,14 +13,19 @@ import org.springframework.boot.SpringBootConfiguration;
 import org.springframework.boot.WebApplicationType;
 import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.boot.web.client.RestTemplateCustomizer;
 import org.springframework.boot.web.embedded.tomcat.TomcatServletWebServerFactory;
+import org.springframework.boot.web.reactive.function.client.WebClientCustomizer;
 import org.springframework.boot.web.servlet.server.ServletWebServerFactory;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.data.neo4j.core.ReactiveDatabaseSelectionProvider;
 import org.springframework.data.neo4j.core.transaction.ReactiveNeo4jTransactionManager;
 import org.springframework.data.neo4j.repository.config.ReactiveNeo4jRepositoryConfigurationExtension;
+import org.springframework.http.client.HttpComponentsClientHttpRequestFactory;
 import org.springframework.transaction.ReactiveTransactionManager;
+import org.springframework.web.client.RestTemplate;
+import org.springframework.web.reactive.function.client.WebClient;
 
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
@@ -161,4 +166,32 @@ public class Springbootstudy2Application {
         connector.setPort(8080);
         return connector;
     }
+
+    // 스프링 rest 클라이언트 전역적 커스터마이징 방법
+    /*
+    @Bean
+    public WebClientCustomizer webClientCustomizer(){
+        return new WebClientCustomizer() {
+            @Override
+            public void customize(WebClient.Builder webClientBuilder) {
+                webClientBuilder.baseUrl("http://localhost:8080"); // webclient builder는 baseurl 가진 상태에서 주입 된다
+            }
+        };
+    }
+
+     */
+    /*
+    // apache http client 사용하는 방법
+    // java http connection 사용하지 않음
+    @Bean
+    public RestTemplateCustomizer restTemplateCustomizer(){
+        return new RestTemplateCustomizer() {
+            @Override
+            public void customize(RestTemplate restTemplate) {
+                restTemplate.setRequestFactory(new HttpComponentsClientHttpRequestFactory());
+            }
+        };
+    }
+
+     */
 }

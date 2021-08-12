@@ -14,7 +14,9 @@ import javax.sql.DataSource;
 import java.sql.Connection;
 import java.sql.DatabaseMetaData;
 import java.sql.SQLException;
+import java.util.Optional;
 
+import static org.assertj.core.api.Assertions.assertThat;
 import static org.junit.jupiter.api.Assertions.*;
 
 // 슬라이싱 test 인메모리 데이터 베이스 필요하다, 슬라이싱 test 권장
@@ -50,9 +52,9 @@ class AccountRepositoryTest {
 
         assertNotNull(newAccount);
 
-        Account byUsername = accountRepository.findByUsername(newAccount.getUsername());
-        assertNotNull(byUsername);
-        Account nonUsername = accountRepository.findByUsername("test");
-        assertNull(nonUsername);
+        Optional<Account> byUsername = accountRepository.findByUsername(newAccount.getUsername());
+        assertThat(byUsername).isNotEmpty();
+        Optional<Account> nonUsername = accountRepository.findByUsername("test");
+        assertThat(nonUsername).isEmpty();
     }
 }
